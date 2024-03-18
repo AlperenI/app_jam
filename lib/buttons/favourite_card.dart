@@ -1,18 +1,19 @@
-
-
 // ignore_for_file: camel_case_types, prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
 
-class buildFavouriteCard extends StatefulWidget {
-  const buildFavouriteCard({super.key});     
-
+class favouriteCard extends StatefulWidget {
+  const favouriteCard({super.key});
   @override
-  State<buildFavouriteCard> createState() => _buildFavouriteCardState();
+  State<favouriteCard> createState() => _favouriteCardState();
 }
 
-class _buildFavouriteCardState extends State<buildFavouriteCard> {
+class _favouriteCardState extends State<favouriteCard> {
+
   Color color=Colors.grey;
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,14 @@ class _buildFavouriteCardState extends State<buildFavouriteCard> {
             //eğer kullanıcı beğenirse favorilerine eklenecek.       
               setState(() {
                 color=color==Colors.grey ? Colors.red:Colors.grey;
+                if (color==Colors.red) {
+                  print("favorilere eklendi");
+                 
+                  
+                }else{
+                  print("favorilerden kaldırıldı");
+                  
+                }
               });
           }, icon: Icon(Icons.favorite,)),
           ),
@@ -38,3 +47,4 @@ class _buildFavouriteCardState extends State<buildFavouriteCard> {
   );
   }
 }
+

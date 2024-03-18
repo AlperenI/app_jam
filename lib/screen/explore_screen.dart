@@ -26,7 +26,7 @@ class _CitiesScreenState extends State<CitiesScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: navigation(page: 1),
+      bottomNavigationBar: Navigation(page: 1),
     );
   }
 

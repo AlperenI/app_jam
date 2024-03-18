@@ -3,22 +3,17 @@
 import 'package:flutter/material.dart';
 import "package:app_jam/buttons/favourite_card.dart";
 
-class Cityscreen extends StatefulWidget {
+class Cityscreen extends StatelessWidget {
   final String cityname; 
   const Cityscreen( {super.key, required this.cityname});
 
   @override
-  State<Cityscreen> createState() => _CityscreenState();
-}
-
-class _CityscreenState extends State<Cityscreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("${widget.cityname}"),),//seçilen şehrin ismi
+      appBar: AppBar(title: Text("$cityname"),),//seçilen şehrin ismi
       body: GridView.count(crossAxisCount:2,padding:EdgeInsets.all(15),
       children: [
-        buildFavouriteCard(),  
+        favouriteCard(),  
       ],)
     );
   }

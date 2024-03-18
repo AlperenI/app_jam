@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget{
           ],
         ),
       ),
-      bottomNavigationBar:navigation(page: 0),
+      bottomNavigationBar:Navigation(page: 0),
     );
   }
 }
